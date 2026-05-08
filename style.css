@@ -45,3 +45,49 @@ header h1 {
   font-size: 16px;
   transition: 0.3s;
 }
+
+
+
+.search-box button:hover {
+  background-color: darkred;
+}
+
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-card {
+  background-color: #1b1b1b;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+.movie-info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.movie-info p {
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+

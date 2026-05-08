@@ -2,7 +2,7 @@ const searchBtn = document.getElementById("searchBtn");
 const searchInput = document.getElementById("searchInput");
 const moviesContainer = document.getElementById("moviesContainer");
 
-const API_KEY = "";
+const API_KEY = "7dc0ec8c";
 
 searchBtn.addEventListener("click", function () {
   const movieName = searchInput.value;
@@ -41,3 +41,43 @@ async function searchMovies(movie) {
       if (data.Response !== "False") break;
     }
   }
+
+   moviesContainer.innerHTML = "";
+
+  if (data.Response === "False") {
+    moviesContainer.innerHTML = "<h2 class='loading'>No movies found</h2>";
+    return;
+  }
+
+  lastMovies = data.Search;
+
+  displayMovies(data.Search);
+}&s=${movie}`
+  );
+
+  const data = await response.json();
+
+  moviesContainer.innerHTML = "";
+
+  if (data.Response === "False") {
+    moviesContainer.innerHTML = "<h2>No movies found</h2>";
+    return;
+  }
+
+  data.Search.forEach(function (movie) {
+    const movieCard = document.createElement("div");
+    movieCard.classList.add("movie-card");
+
+    movieCard.innerHTML = `
+      <img src="${movie.Poster}" alt="Movie Poster">
+
+      <div class="movie-info">
+        <h2>${movie.Title}</h2>
+        <p>Year: ${movie.Year}</p>
+        <p>Type: ${movie.Type}</p>
+      </div>
+    `;
+
+    moviesContainer.appendChild(movieCard);
+  });
+}

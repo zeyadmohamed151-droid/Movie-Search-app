@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+}
+
+header h1 {
+  font-size: 40px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.search-box input {
+  width: 300px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}

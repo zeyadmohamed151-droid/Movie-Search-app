@@ -14,18 +14,18 @@ Also, you can add your favorites movies to make it easier to track them
 https://zeyadmohamed151-droid.github.io/Movie-Search-app/
 
 ## what i learned:
--For the API to get the information I connected the website to the OMDb API which gave me 1000 free respond using the fetch() function in JavaScript.
+- For the API to get the information I connected the website to the OMDb API which gave me 1000 free respond using the fetch() function in JavaScript.
 a request is sent to the API URL with my free API key and the movie name you searched about.
 -for the API data I used async/await to wait for the response before displaying the movies.
 After getting the response, I converted it into JSON format to display it to the user
--I also checked if no movies were found by using:
+- I also checked if no movies were found by using:
 if (data.Response === "False")
--3- I managed different features by separating the code into functions.
+- I managed different features by separating the code into functions.
 For example:
 searchMovies() to get the result of the search
 displayMovies() i used this one to get the poster of the movie
 addToFavorites() i used to add any movie i want to the favirites
--4- I saved favorites using LocalStorage in the browser.
+- I saved favorites using LocalStorage in the browser.
 When the you clicks “Add to Favorites”, the movie will be stored using:
  localStorage.setItem("favorites", JSON.stringify(favoriteMovies));
 when you open the website favorites movies are retrieved using:
